@@ -1,0 +1,12 @@
+{
+  "name": "atwo-digital-agency-website",
+  "private": true,
+  "scripts": {
+    "start:frontend": "npm --prefix apps/frontend run dev",
+    "start:backend": "npm --prefix apps/backend run start:dev",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

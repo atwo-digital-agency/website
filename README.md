@@ -59,3 +59,104 @@ ATWO DIGITAL is a creative agency supporting brands, companies, and institutions
     Scalable architecture designed for long-term evolution
 
 🚀 Explore our world: www.atwodigitalagency.fr
+
+
+
+
+
+# ATWO Digital Agency - Website Monorepo
+```markdown
+Ce repository contient un monorepo avec deux applications :
+
+- `apps/frontend` : application frontend React avec Vite et TypeScript  
+- `apps/backend` : application backend NestJS
+
+```
+--- 
+
+## Structure du projet
+
+```
+website/
+├─ apps/
+│    ├─ frontend/   # React + Vite
+│    └─ backend/    # NestJS backend
+├─ package.json     # scripts communs et dépendances dev
+└─ .gitignore
+
+```
+
+---
+
+## Installation
+
+Depuis la racine du repo, installe les dépendances :
+
+```bash
+npm install
+````
+
+Cela installera les dépendances pour la racine (notamment `concurrently`), et tu devras aussi installer celles des apps séparément si besoin :
+
+```bash
+npm --prefix apps/frontend install
+npm --prefix apps/backend install
+```
+
+---
+
+## Commandes
+
+Lance le frontend uniquement :
+
+```bash
+npm run start:frontend
+```
+
+Lance le backend uniquement :
+
+```bash
+npm run start:backend
+```
+
+Lance les deux en même temps (pratique pour le dev) :
+
+```bash
+npm run start
+```
+
+---
+
+## `.gitignore`
+
+Le fichier `.gitignore` exclut les dossiers `node_modules` et `dist` dans chaque app.
+
+---
+
+## Structure détaillée des apps
+
+### Frontend React
+
+* Créé avec Vite + TypeScript
+* Démarrage avec `npm run dev`
+
+### Backend NestJS
+
+* Créé avec Nest CLI
+* Démarrage avec `npm run start:dev`
+
+---
+
+## Contribuer
+
+* Crée une branche par fonctionnalité
+* Fais des commits clairs
+* Ouvre une Pull Request pour revue
+
+---
+
+## Contact
+
+Pour toute question, contacte l’équipe ATWO Digital Agency `atwodigitalagency@gmail.com`.
+
+
