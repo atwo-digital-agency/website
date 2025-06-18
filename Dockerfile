@@ -12,17 +12,16 @@ RUN npm run build
 # Étape 2 : Serveur Nginx
 FROM nginx:1.25-alpine
 
-# Supprimer le contenu par défaut de Nginx
+# Nettoie les fichiers nginx existants
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copier le build Vite dans le dossier servi par Nginx
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copie les fichiers de build
+COPY dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copier une config nginx custom (on la crée juste après)
-COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+# ✅ Corrige les permissions : sans ça, Nginx renvoie une erreur 500
+RUN chmod -R 755 /usr/share/nginx/html
 
-# Exposer le port
 EXPOSE 80
 
-# Lancer nginx
 CMD ["nginx", "-g", "daemon off;"]
