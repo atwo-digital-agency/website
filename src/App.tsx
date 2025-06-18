@@ -1,6 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import Solutions from "./pages/Solutions";
-import About from "./pages/About";
 import Maintenance from "./pages/Maintenance";
 
 function App() {
