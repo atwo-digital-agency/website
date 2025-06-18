@@ -1,7 +1,7 @@
-import AboutUs from "../componants/AboutUs";
-import ContactUs from "../componants/ContactUs";
-import Footer from "../componants/Footer";
-import Navbar from "../componants/Navbar";
+import AboutUs from "../components/AboutUs";
+import ContactUs from "../components/ContactUs";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 export default function About() {
   return (
