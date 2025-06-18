@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+:root {
+  @apply font-sans bg-background text-white font-normal text-center uppercase;
+}
+
+.disabled-link {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: gray;
+  opacity: 0.6;
+}
